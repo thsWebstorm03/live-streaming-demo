@@ -85,12 +85,9 @@ talkButton.onclick = async () => {
       },
       body: JSON.stringify({
         script: {
-          type: 'audio',
+          type: "text",
+          input: "Hello world!",
           audio_url: 'https://storage.googleapis.com/eleven-public-prod/SHKgfXt9DkZYGwKLWe68UNnhWB52/voices/HWREwiOXcc7qr0ilCqsg/efad0461-7e8e-4764-bba9-42c2ed034dff.mp3',
-        },
-        driver_url: 'bank://lively/',
-        config: {
-          stitch: true,
         },
         session_id: sessionId,
       }),
@@ -227,8 +224,8 @@ function setVideoElement(stream) {
   if (talkVideo.paused) {
     talkVideo
       .play()
-      .then((_) => {})
-      .catch((e) => {});
+      .then((_) => { })
+      .catch((e) => { });
   }
 }
 
